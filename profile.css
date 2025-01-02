@@ -1,0 +1,614 @@
+*{ box-sizing: border-box;}
+
+*{
+     margin: 0;
+     padding: 0;
+}
+ .grid-container {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px minmax(500px,auto) 50px;
+    gap:0px;
+    margin:0px;
+    font-size: 1em;
+    text-align: left;
+}
+
+/*nav{
+    background-color:blueviolet;
+    grid-area: 1/1/2/3;
+    
+}*/
+/* css for nav bar of the home page*/
+nav{
+    grid-area: 1/1/1/3;   
+}
+nav ul{list-style-type: none;}
+nav a {font-size: 1em; }
+nav a:link ,button{ color:#006600;}
+nav a:visited ,button{ color: #003300; }
+nav a:focus, nav a:hover, button { color: red; }
+
+/* css for picture on the nav bar of the homepage */
+#pic-profile2 {
+    float: left;
+    width: 100;
+    height: 150;
+    margin: auto;
+    
+}
+
+
+/* css for image on the nav bar for homepage*/
+  figcaption {
+    height: 1.2em;
+    width: 100%;
+    margin-top: -2.4em;
+    float: left;
+    text-align: center;
+    z-index: 1;
+    font-family: 'Open Sans', sans;
+    color: blue; 
+    font-size: small;
+    transform: rotate(45deg);
+    text-shadow:2px 2px 4px blue;
+    
+  }
+  
+
+
+/* css for scrolling the webpage*/
+html{
+    scroll-behavior: smooth;
+   }
+/* css for main body home page*/
+main{
+    font-size: 2em large;
+    text-align: center;
+    background-color:brown;
+    grid-area:2/1/4/3;
+}
+/*css animation for main body home page starts here! */
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;       
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+
+/*.aside2{
+    background-color: rgb(163, 39, 97);
+
+}*/
+/* css for header of the homepage */
+header {
+    margin-top: 0px;
+    margin-bottom:0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: blueviolet;
+    background-color: #636631;
+    height: 100px; 
+    text-align:center;
+    grid-area: 1/1/1/3;
+    text-align:center;
+    padding: 0px 20px 10px 20px;
+    border-bottom: 2px solid #000000; 
+    z-index: 10;
+}
+/* css to display nav menu in line*/
+.display1{
+    display: inline;
+    float: right;
+    position:relative;
+    padding: 5px; 
+    font-size: medium;
+    margin: 0 auto; 
+}
+#wrapper {
+    margin: 100px 50px 100px 50px;
+    padding: 1px 10px 250px 10px; 
+    text-align: center;
+    font-size: large; 
+}
+/* css fro text on main of the homepage*/
+h1.show1 {
+    margin-top:5px;
+    margin-bottom: 5px;
+    color:blueviolet;
+    font-size:4em;
+    text-shadow: 2px 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+
+}
+h1.show2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color:blueviolet;
+    font-size:3em;
+    text-shadow: 2px 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+/* css for the animation on main body of home page */
+@keyframes animation1 {
+    from{
+          transform: translateX(100px);
+          
+          
+    }
+    to{
+    
+        transform:translateY(100px);
+    
+    }
+
+}
+.show1{
+    animation-name: animation1;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: 3;
+    animation-direction:alternate;
+}
+
+.show2{
+    animation-name: animation1;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+}
+/* css of pictures on the homepage(main page) */
+.pic-profile {
+    float: right;
+    width: 100;
+    height: 100;
+    margin: 10px;
+    cursor: pointer;
+}
+.pic-profile { 
+    position: relative; 
+    display: inline-block; 
+  } 
+  
+  .default-image { 
+    display: block; /* Show the default image */ 
+  } 
+  
+  .hover-image { 
+    display: none; /* Hide the hover image by default */ 
+  } 
+  
+  .pic-profile:hover .default-image { 
+    display: none; /* Hide default image on hover */ 
+  } 
+  
+  .pic-profile:hover .hover-image { 
+    display: block; /* Show hover image on hover */ 
+  } 
+  
+/* css displaying article in block on homepage(main page)*/ 
+.pic-display{
+    display: block;
+    float:right;
+}
+/* css of notification of pictures hovered on main page*/
+#hoverP{
+    float:right;
+    color: #2e0066;
+    margin: 2px;
+    padding: 3px;
+    
+}
+/* css for the CV button*/
+#clickMe {
+    border: none;
+    color:red;
+    background-color: #636631;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+.aside1{
+    background-color: yellow;
+    grid-area:1/1/1/3;
+}
+
+/*----the CSS For AboutME Webpage Starts here------*/
+
+/* css for Aboutme webpage main page */
+#Aboutme-main{
+    font-size: 2em large;
+    text-align: center;
+    background-color:rgb(0, 195, 255);
+    grid-area:2/1/4/3;
+}
+/* css for Aboutme webpage main page(background) */
+.Aboutme-B{
+    display: block;
+    color:#000000;
+    float: left;
+    word-wrap: normal;
+    margin: 0 auto;
+    width: 960px;
+    grid-area:3/1/4/2;
+    font-size: 18px;
+    text-align: center;
+    text-align: justify;
+}
+/* css for sub-heading in Skills,Aboutme,Contact and project Webpages */
+.heading-sub{
+       font-size: 2em;
+       text-align: center;
+       color: #2e0066;
+       text-decoration: solid;
+       text-shadow: #003300;
+}
+
+/* css for footer in Skills,Aboutme,Contact and project Webpages */
+footer{
+    background-color: chartreuse;
+    grid-area:3/1/4/3;
+}
+
+/*----the CSS For Skills Webpage Starts here------*/
+
+/* css for skills webpage main page */
+#Skills-main{
+    font-size: 1em large;
+    text-align: center;
+    text-align: justify;
+    background-color:rgb(51, 56, 57);
+    grid-area:2/1/4/3;
+}
+/*the css picture images for skill webpage */
+.Skill-display{
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+    width: 960px;
+}
+/* css for Skills webpage main page(knowledge) */
+.Skills-K{
+    display: block;
+    color:#000000;
+    word-wrap: normal;
+    margin: 0 auto;
+    width: 960px;
+    grid-area:3/1/4/2;
+    font-size: 20px;
+    text-align: center;
+    text-align: justify
+}
+/*the css to align picture images for skill webpage */
+ #pic-skills{
+    display:inline-block;
+    width: 100;
+    height: 100;
+    margin: 30px;
+    padding: 30px;
+    cursor: pointer
+}
+.button-skills {
+    background-color: #2708747e;
+    border: none;
+    color:gray;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration:none;
+    text-decoration: solid;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+ /* css for the animation on main body of  Skills page */
+
+@keyframes animation2 {
+    from{
+          transform: translate2d()
+          rotateX('150');
+          
+          
+    }
+    to{
+    
+        transform: translate 2px;
+        rotate: ('100');
+    
+    }
+
+}
+.button-skills{
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
+    animation-direction:alternate-reverse
+}
+
+.button-skills{
+    animation-name: animation2;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+}
+
+.foot_image{
+    padding: 5px 5px;
+    width: 100%;
+    margin:auto 0;
+    text-align:center;
+}
+ 
+/*----the CSS For Projects Webpage Starts here------*/
+
+#Project-main{
+    font-size: 1em large;
+    text-align: center;
+    text-align: justify;
+    background-color:rgb(91, 16, 91);
+    grid-area:2/1/4/3;
+}
+#project_about{
+    text-align: center;
+    text-align: justify;
+    background-color:rgb(16, 75, 91);
+}
+.project-click{
+    background-color:wheat;
+    border: none;
+    color:rgb(62, 2, 24);
+    padding: 5px 1opx;
+    text-align: center;
+    text-decoration:none;
+    text-decoration: solid; 
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .project_program1{
+    background-color: rgb(91,16,91); 
+    height: 400px; 
+    display: inline-flex; 
+    justify-content:center; 
+    align-items:center;
+  }
+  .project_program2{
+    background-color: rgb(91,16,91); 
+    height: 400px; 
+    display: inline-block; 
+    justify-content:center; 
+    align-items:center;
+  }
+
+  .pro_program1{
+    margin-left: 5px;
+    margin: 10px;
+    background-color: lightblue; 
+    width: 500px; 
+    height: 300px;
+  } 
+  #program-pic1{
+    float:centre;
+    width: 50;
+    height: 100;
+    margin: auto;
+    justify-content: center; 
+    align-items: center;
+  }
+  #program-pic2{
+    float: centre;
+    width: 50;
+    height: 100;
+    margin: auto;
+    justify-content: center; 
+    align-items: center;
+  }
+  #program-pic3{
+    float: centre;
+    width: 50;
+    height: 100;
+    margin: auto;
+    justify-content: center; 
+    align-items: center;
+  }
+
+/*----the CSS For Contact Webpage Starts here------*/
+
+#Contact-main{
+    font-size: 1em large;
+    text-align: center;
+    text-align: justify;
+    background-color:orangered;
+    grid-area:2/1/4/3;
+}
+
+.contact-form{
+    background-color: orangered; 
+    height: 500px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.contact-form1{
+    background-color: lightblue; 
+    width: 600px; 
+    height: 400px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.label-form{
+    color: #000000;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center; 
+    align-items: center;
+}
+
+#fullname{
+    height: 30px;
+    width: 450px;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center; 
+    align-items: center;
+}
+#email{
+    height: 30px;
+    width:450px;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center; 
+    align-items: center;
+}
+#phone{
+    height:30px;
+    width: 450px;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center; 
+    align-items: center;
+}
+
+#submit-form{
+    color:#000000;
+    border: none;
+    background-color: #636631;
+    justify-content: center; 
+    align-items: center;
+    width: 260px;
+    height: 30px;
+}
+#reset-form{
+    color:#000000;
+    border: none;
+    background-color: #636631;
+    justify-content: center; 
+    align-items: center;
+    width: 260px;
+    height: 30px;
+}
